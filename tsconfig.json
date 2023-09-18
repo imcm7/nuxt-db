@@ -1,0 +1,13 @@
+{
+  // https://nuxt.com/docs/guide/concepts/typescript
+  "compilerOptions": {
+    "baseUrl": ".",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "types": [
+      "vite-plugin-pwa/vue"
+    ]
+  },
+  "extends": "./.nuxt/tsconfig.json"
+}

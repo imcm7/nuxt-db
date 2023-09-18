@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "db:update": "mikro-orm schema:update --run"
+  },
+  "dependencies": {
+    "@mikro-orm/core": "^5.7.14",
+    "@mikro-orm/mariadb": "^5.7.14",
+    "cookie-parser": "^1.4.6",
+    "morgan": "^1.10.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@mikro-orm/cli": "^5.7.14",
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.7.1"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./server/data-source.js",
+      "./server/data-source.ts"
+    ]
+  }
+}
