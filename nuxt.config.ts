@@ -22,10 +22,10 @@ export default defineNuxtConfig({
         ],
   },
   modules: [
-        '@nuxtjs/i18n', // https://v8.i18n.nuxtjs.org/options/vue-i18n
-        '@nuxtjs/tailwindcss', // https://tailwindcss.nuxtjs.org/getting-started/setup
-        '@pinia/nuxt' // https://pinia.vuejs.org/ssr/nuxt.html
-    ],
+    '@nuxtjs/i18n', // https://v8.i18n.nuxtjs.org/options/vue-i18n
+    '@nuxtjs/tailwindcss', // https://tailwindcss.nuxtjs.org/getting-started/setup
+    '@pinia/nuxt' // https://pinia.vuejs.org/ssr/nuxt.html
+  ],
   nitro: {
     esbuild: {
       options: {
@@ -36,5 +36,11 @@ export default defineNuxtConfig({
         }
       }
     }
-  }
+  },
+  // TypeScript: https://nuxt.com/docs/getting-started/installation#prerequisites
+  typescript: {
+    includeWorkspace: true,
+    typeCheck: true,
+    shim: false, // For TypeScript Vue Plugin (Volar).
+  },
 })
