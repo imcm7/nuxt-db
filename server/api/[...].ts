@@ -90,14 +90,6 @@ export const authOptions: AuthConfig = {
         }
 
         return authController?.login(credentials);
-
-        // const authService: AuthService = event.context.di.get(AuthService.name);
-
-        // try {
-        //   return await authService.login(credentials);
-        // } catch (error: any) {
-        //   return null;
-        // }
       },
     }),
     GithubProvider({
@@ -107,33 +99,4 @@ export const authOptions: AuthConfig = {
   ],
 };
 
-/**
- * @openapi
- * /api/auth/login:
- *   post:
- *     description: Login.
- *     summary: Login user.
- *     requestBody:
- *       description: User data.
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             $ref: '#/components/schemas/User'
- *     responses:
- *       200:
- *         description: User was successfully logged in.
- *         content:
- *           application/json:
- *             schema:
- *               $ref: '#/components/schemas/User'
- *       404:
- *         $ref: '#/components/responses/NotFound'
- *       502:
- *         $ref: '#/components/responses/InternalServer'
- *       default:
- *         $ref: '#/components/responses/Unexpected'
- *     tags:
- *       - Authentication
- */
 export default NuxtAuthHandler(authOptions, runtimeConfig);
