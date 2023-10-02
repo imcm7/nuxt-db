@@ -1,11 +1,11 @@
 
 // Pass the problem
 
-declare module 'vue-router' {
-    interface RouteMeta {
-        title?: string | number;
-    }
-}
+// declare module 'vue-router' {
+//     interface RouteMeta {
+//         title?: string | number;
+//     }
+// }
 
 
 // No effect 
