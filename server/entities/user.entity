@@ -1,0 +1,11 @@
+class BaseClass {
+  baseTest: string = 'base test';
+}
+
+export class User extends BaseClass {
+  test: string = 'test';
+
+  testMethod() {
+     return 'test';
+  }
+}
