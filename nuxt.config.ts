@@ -1,5 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
+  builder: 'webpack',
   devtools: { enabled: true },
   i18n: {
         baseUrl: 'http://localhost:3000',
@@ -22,7 +24,7 @@ export default defineNuxtConfig({
         ],
   },
   modules: [
-    // "@hebilicious/authjs-nuxt",
+    '@hebilicious/authjs-nuxt',
     '@nuxtjs/i18n', // https://v8.i18n.nuxtjs.org/options/vue-i18n
     '@nuxtjs/tailwindcss', // https://tailwindcss.nuxtjs.org/getting-started/setup
     '@pinia/nuxt' // https://pinia.vuejs.org/ssr/nuxt.html
